@@ -18,7 +18,7 @@
     align-items: center;
     justify-content: center;
     background-color: #8ca2b4;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
 }
@@ -45,11 +45,10 @@
     margin-top: 10px;
     justify-content: center;
     align-items: center;
+    list-style: none;
 }
 
-ul li {
-    list-style: none;
-    
+ul li {   
     margin-top: 25px;
     padding: 0 35px;
     font-size: 20px;
@@ -71,6 +70,21 @@ html {
     scroll-behavior: smooth;
 }
 
+.section-divider {
+    justify-content: center;
+    width: 90%;
+    height: 3px;
+    margin: 40px auto;
+    margin-top: 50px;
+    background: linear-gradient(
+        to right,
+        transparent 0%,
+        black 50%,
+        transparent 100%
+    );
+    filter: blur(0.4px);
+}
+
 .intro {
     width: 100%;
     height: 80vh;
@@ -89,7 +103,7 @@ html {
     font-size: 40px;
     margin: 15px;
     font-family: monospace;
-    color: #674478;
+    color: #854b7e
 }
 
 .intro h2 {
@@ -120,15 +134,11 @@ html {
 
 .about {
     width: 100%;
-    margin-top: 20px;
-    outline: 2px solid black;
 }
 
 #About {
     width: 100%;
     height: 100vh;
-    margin-top: 20px;
-    outline: 2px solid black;
     box-sizing: border-box;
 }
 
@@ -141,7 +151,7 @@ html {
 .about-container {
     display: flex;
     align-items: flex-start;
-    gap: 90px;
+    gap: 70px;
 }
 
 .about-container img {
@@ -149,14 +159,23 @@ html {
     border-radius: 15px;
     display: block;
     margin-left: 80px;
-    margin-top: 80px;
+    margin-top: 40px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .about-text {
-    flex: 1;
-    padding: 10px;
-    align-self: center;
+    position: absolute;
+    left: 44%;
+    margin-top: 100px;
+    outline: 2px solid black;
+    width: 800px;
+    height: 400px;
+    border-radius: 30px;
+    background-color: #b48caf20;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .about-text p{
@@ -164,17 +183,14 @@ html {
     line-height: 2;
     font-size: medium;
     height: 250px;
+    width: 750px;
 
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #Technologies {
     width: 100%;
     height: 100vh;
-    margin-top: 20px;
+    margin-top: 50px;
     box-sizing: border-box;
 }
 
@@ -182,6 +198,8 @@ html {
     text-align: center;
     font-size: xx-large;
     font-family: "Cascadia Code", monospace;
+    height: 60px;
+
 }
 
 .skill-container {
@@ -306,3 +324,188 @@ html {
     border-radius: 0 5 5 0;
 }
 
+#Projects {
+    width: 100%;
+    height: auto;
+    padding-bottom: 80px;
+    margin-top: 50px;
+    box-sizing: border-box;
+    font-family: "Cascadia Code", monospace;
+}
+
+#Projects h2 {
+    text-align: center;
+    font-size: xx-large;
+    height: 60px;
+}
+
+.project-box {
+    position: relative;
+    width: 90%;
+    height: 300px;
+    margin: 50px auto 0 auto;
+    border-radius: 25px;
+    background-color: #9ec4e043;
+    outline: 3px solid black;
+}
+
+.project-name {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.project-description {
+    position: absolute;
+    align-items: center;
+    top: 60px;
+    left: 50%;
+    height: 100px;
+    width: 90%;
+    transform: translateX(-50%);
+    line-height: 2;
+    font-size: medium;
+}
+
+.project-languages {
+    position: absolute;
+    bottom: 30px;
+    left: 15%;
+    width: 300px;
+    height: 60px;
+    padding: 10px 10px;
+    margin: 0;
+    outline: 1px solid rgb(77, 54, 85);
+    border-radius: 15px;
+    background-color: #a871a81b;
+}
+
+.info-header {
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+}
+
+.project-languages ul { 
+    height: 83%;
+    list-style-type: disc;
+    list-style-position: inside;
+    column-count: 2;
+    column-gap: 30px;
+    padding-left: 10px;
+    margin: 0;
+}
+
+.project-languages li {
+    font-size: 15px;
+    margin: 0;
+    padding-left: 10px;
+    line-height: 1.5;
+    width: 100%;
+}
+
+.project-git {
+    position: absolute;
+    bottom: 30px;
+    right: 15%;
+    width: 300px;
+    height: 60px;
+    padding: 10px;
+    margin: 0;
+    outline: 1px solid rgb(77, 54, 85);
+    border-radius: 15px;
+    background-color: #a871a81b;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.project-git a {
+    position: relative;
+    display: inline-block;
+    color: black;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.project-git a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    width: 110%;
+    height: 2px;
+    transition: transform 0.3s ease;
+    background-color: rgb(91, 6, 114);
+}
+
+.project-git a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.project-updated {
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+#Contact {
+    width: 100%;
+    height: auto;
+    padding-bottom: 80px;
+    box-sizing: border-box;
+    font-family: "Cascadia Code", monospace;
+}
+
+#Contact h2 {
+    text-align: center;
+    font-size: xx-large;
+    height: 70px;
+}
+
+.perfer {
+    padding-left: 28%;
+    padding-bottom: 7px;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20%;
+    height: 100px;
+    width: 85%;
+    margin: 0 auto; 
+}
+
+.contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 2px solid black;
+    width: 25%;
+    height: 100px;
+    border-radius: 25px;
+    background-color: #d193df43;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.contact-info {
+    text-align: center;
+    top: 50%;
+}
+
+.contact-info h3 {
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 5px;
+}
