@@ -9,6 +9,7 @@
 }
 
 .menu {
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
@@ -21,14 +22,20 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
+    bottom: 20px;
 }
 
 .icon {
     position: absolute;
     left: 40px;
     display: flex;
-    align-items: center;
     gap: 10px;
+}
+
+.gitHub img{
+    position: absolute;
+    height: 35px;
+    right: 40px;
 }
 
 .icon img {
@@ -42,7 +49,6 @@
 .menu ul {
     float: center;
     display: flex;
-    margin-top: 10px;
     justify-content: center;
     align-items: center;
     list-style: none;
@@ -140,6 +146,7 @@ html {
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
+    scroll-margin-top: 150px;
 }
 
 #About h2 {
@@ -192,6 +199,7 @@ html {
     height: 100vh;
     margin-top: 50px;
     box-sizing: border-box;
+    scroll-margin-top: 150px;
 }
 
 #Technologies h2 {
@@ -331,6 +339,8 @@ html {
     margin-top: 50px;
     box-sizing: border-box;
     font-family: "Cascadia Code", monospace;
+    scroll-margin-top: 150px;
+
 }
 
 #Projects h2 {
